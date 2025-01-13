@@ -8,7 +8,7 @@ type Config struct {
 
 func LoadConfig() *Config {
 	port := os.Getenv("SERVER_PORT")
-	if port != "" {
+	if port == "" {
 		port = "3000"
 	}
 	return &Config{
